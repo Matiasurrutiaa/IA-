@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top: 50px; /* Add padding to ensure the content is not hidden by the browser's top bar */
+}
+
+.form-container {
+    text-align: center;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+img {
+    max-width: 80%;
+    height: auto;
+    margin: 10px;
+}
+
+.button-container {
+    margin-top: 20px;
+}

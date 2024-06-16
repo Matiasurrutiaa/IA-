@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Colorization</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Colorize Your Image</h1>
+        <form action="/colorize" method="post">
+            <label for="url">Image URL:</label>
+            <input type="text" id="url" name="url">
+            <button type="submit">Colorize</button>
+        </form>
+    </div>
+    {% if original_image and colorized_image %}
+    <div class="image-container">
+        <h1>Original and Colorized Images</h1>
+        <h2>Original Image</h2>
+        <img src="data:image/png;base64,{{ original_image }}" alt="Original Image">
+        <h2>Colorized Image</h2>
+        <img src="data:image/png;base64,{{ colorized_image }}" alt="Colorized Image">
+        <div class="button-container">
+            <button onclick="window.location.href='/'">Load Another Image</button>
+        </div>
+    </div>
+    {% endif %}
+</body>
+</html>
